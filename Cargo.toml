@@ -1,5 +1,5 @@
 [package]
-name = "AvitoReqwestRust"
+name = "avito_reqwest_rust"
 version = "0.1.0"
 authors = ["Igor K. <1@appinfo.ru>"]
 edition = "2018"
