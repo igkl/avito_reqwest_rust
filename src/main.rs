@@ -2,7 +2,7 @@ extern crate reqwest;
 
 //use std::collections::HashMap;
 
-fn main() -> Result<(), Box<std::error::Error>> {
+fn main() -> Result<(), Box<dyn std::error::Error>> {
   //  let resp: HashMap<String, String> = reqwest::get("https://httpbin.org/ip")?
    //     .json()?;
    // println!("{:#?}", resp);
@@ -18,7 +18,7 @@ fn main() -> Result<(), Box<std::error::Error>> {
     println!("Something else happened. Status: {:?}", resp.status());
    }
    
-   let body = resp.text()?;
+   let body = resp.text().expect("Error");
 
    println!("{}", body);
    
